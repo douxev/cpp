@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 11:07:39 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/21 16:20:37 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/21 16:46:02 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ class Contact
 	public:
 	
 	Contact(void);
+	void	lprint(void);
 	void	print(void);
-	
-	
+
 	private:
 
 	std::string _first_name;
 	std::string _last_name;
 	std::string _nickname;
-	int			_number;
+	std::string	_number;
 	std::string	_darkest_secret;
 };
 
