@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 10:49:40 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/21 17:16:39 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/21 17:20:55 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void PhoneBook::add(void)
 void PhoneBook::search(void)
 {
 	std::cout << \
-	"| First name | Last name | Nickname | Number | Secret |" << std::endl;
+	"| First name |  Last name |   Nickname |     Number |     Secret |" << std::endl;
 	for (int i = 0; i < 8 && this->_contacts.at(i); i++)
 		this->_contacts.at(i)->lprint();
 	return ;
