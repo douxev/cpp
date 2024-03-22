@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/03/21 16:08:23 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/03/22 10:55:19 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ INCLUDES =
 ################################################################################
 
 SRCS = $(SOURCES)
-OBJS = $(SRCS:%.c=%.o)
+OBJS = $(SRCS:%.cpp=%.o)
 
 ################################################################################
 #                               Makefile Rules                                 #
@@ -47,14 +47,14 @@ OBJS = $(SRCS:%.c=%.o)
 all: $(NAME)
 
 %.o : %.c
-	@$(CC) $(CFLAGS) -c -o $@ $< $(INCLUDES)
+	@$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME) : $(OBJS)
-	@$(CC) $(SRCS) $(CFLAGS) -o $(NAME) $(INCLUDES)
+	@$(CC) $(SRCS) $(CFLAGS) -o $(NAME)
 	@echo "\033[0;32mMandatory part compiled ✔️\033[0m"
 
 clean:
-	@rm -rf $(OBJS) $(B_OBJS)
+	@rm -rf $(OBJS)
 	@echo "\033[0;33mCleaned .o files ✔️\033[0m"
 
 fclean: clean
