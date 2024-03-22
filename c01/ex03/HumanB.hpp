@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 13:04:36 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/22 14:38:58 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/22 15:07:52 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class HumanB
 
 	private:
 
-	Weapon		_weapon;
+	Weapon		*_weapon;
 	std::string	_name;
 };
 

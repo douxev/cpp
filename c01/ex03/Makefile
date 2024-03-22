@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/03/22 13:34:40 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/03/22 15:08:35 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME = brainz
+NAME = weapon
 CFLAGS = -Wall -Wextra -Werror
 CC = c++
 URL = https://cdn.intra.42.fr/pdf/pdf/89227/en.subject.pdf
