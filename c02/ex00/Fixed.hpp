@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 20:45:49 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/23 20:52:46 by jdoukhan         ###   ########.fr       */
+/*   Created: 2024/03/23 13:43:54 by jdoukhan          #+#    #+#             */
+/*   Updated: 2024/03/23 13:44:38 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-int	main(void)
-{
-	Harl	harl;
+# include <string>
+# include <algorithm>
+# include <iostream>
 
-	harl.complain("DEBUG");
-	harl.complain("INFO");
-	harl.complain("WARNING");
-	harl.complain("ERROR");
-	return (0);
-}
+
+
+#endif
