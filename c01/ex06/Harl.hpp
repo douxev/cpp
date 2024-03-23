@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:00:40 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/23 21:00:52 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/23 21:23:29 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Harl
 	public:
 
 	Harl(void);
+	Harl(std::string level);
 	void	complain( std::string level );
 
 	private:
@@ -37,6 +38,7 @@ class Harl
 	void	info( void );
 	void	warning( void );
 	void	error( void );
+	std::string _level;
 };
 
 #endif
