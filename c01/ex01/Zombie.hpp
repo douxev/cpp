@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 11:25:57 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/22 12:22:00 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:55:47 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <iostream>
 # include <string>
-# include <array>
-# include <algorithm> 
 
 class Zombie
 {

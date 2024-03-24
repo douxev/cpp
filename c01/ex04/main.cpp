@@ -6,11 +6,15 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 15:11:50 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/23 11:55:21 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:46:06 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sed.hpp"
+#include <sstream>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <fcntl.h>
 
 std::string	ft_replace(std::string str, std::string src, std::string dest)
 {
@@ -24,7 +28,7 @@ std::string	ft_replace(std::string str, std::string src, std::string dest)
 		index += str.substr(index).find(src);
 		str.erase(index, src.size());
 		str.insert(index, dest);
-		index += dest.size() - src.size();
+		index += dest.size();
 		if (index < 0)
 			index = 0;
 	}
@@ -33,12 +37,12 @@ std::string	ft_replace(std::string str, std::string src, std::string dest)
 
 int	main(int ac, char **av)
 {
-	std::string		filename;
-	std::string		src;
-	std::string		dest;
-	std::string		str;
-	std::ifstream	infile;
-	std::ofstream	outfile;
+	std::string			filename;
+	std::string			src;
+	std::string			dest;
+	std::stringstream	buf;
+	std::ifstream		infile;
+	std::ofstream		outfile;
 
 	if (ac != 4)
 		return (0);
@@ -47,13 +51,24 @@ int	main(int ac, char **av)
 	dest = av[3];
 	if (src.size() == 0)
 		return (std::cout << "Error, passed string invalid." << std::endl, 1);
-	infile.open(filename);
-	outfile.open((filename + ".replace"));
-	
-	while(getline(infile, str))
+	infile.open(filename.c_str());
+	if (!infile.is_open())
 	{
-		outfile << ft_replace(str, src, dest) << std::endl;
+		std::cout << "Error: input file could not be opened." << std::endl;
+		return (1);
 	}
+
+	outfile.open((filename + ".replace").c_str());
+	if (!outfile.is_open())
+	{
+		infile.close();
+		std::cout << "Error: output file could not be created/opened." << std::endl;
+		return (1);
+	}
+
+	buf << infile.rdbuf();
+	outfile << ft_replace(buf.str(), src, dest);
+
 	outfile.close();
 	infile.close();
 	return (0);

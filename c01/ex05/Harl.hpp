@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:00:40 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/23 21:00:52 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/24 11:24:02 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Harl
 		void		(Harl::*f)(void);
 		std::string	level;
 	};
-	struct	_s_message	message[4];
+	struct	_s_message	_message[4];
 
 	void	debug( void );
 	void	info( void );

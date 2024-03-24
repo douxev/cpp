@@ -6,11 +6,20 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 12:03:53 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/23 21:25:54 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:23:14 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+Harl::Harl(void): _level("DEBUG")
+{
+	this->init_message();
+}
+Harl::Harl(std::string level): _level(level)
+{
+	this->init_message();
+}
 
 void	Harl::complain( std::string level )
 {
@@ -19,41 +28,24 @@ void	Harl::complain( std::string level )
 	
 	i = 0;
 	check = 0;
-	while (this->message[i].level != level && i < 4)
+	while (this->_message[i].level != level && i < 4)
 	{
-		if (this->message[i].level == this->_level)
+		if (this->_message[i].level == this->_level)
 			check = 1;
 		i++;
 	}
-	if (i < 4 && (check || this->message[i].level == this->_level))
-		(this->*message[i].f)();
+	if (i < 4 && (check || this->_message[i].level == this->_level))
+		(this->*_message[i].f)();
 }
 
-Harl::Harl(void)
+void	Harl::init_message(void)
 {
-	this->_level = "DEBUG";
-	this->message[0].level = "DEBUG";
-	this->message[0].f = &Harl::debug;
-	this->message[1].level = "INFO";
-	this->message[1].f = &Harl::info;
-	this->message[2].level = "WARNING";
-	this->message[2].f = &Harl::warning;
-	this->message[3].level = "ERROR";
-	this->message[3].f = &Harl::error;
+	this->_message[0] = (struct _s_message){.level = "DEBUG", .f = &Harl::debug};
+	this->_message[1] = (struct _s_message){.level = "INFO", .f = &Harl::info};
+	this->_message[2] = (struct _s_message){.level = "WARNING", .f = &Harl::warning};
+	this->_message[3] = (struct _s_message){.level = "ERROR", .f = &Harl::error};
 }
 
-Harl::Harl(std::string level)
-{
-	this->_level = level;
-	this->message[0].level = "DEBUG";
-	this->message[0].f = &Harl::debug;
-	this->message[1].level = "INFO";
-	this->message[1].f = &Harl::info;
-	this->message[2].level = "WARNING";
-	this->message[2].f = &Harl::warning;
-	this->message[3].level = "ERROR";
-	this->message[3].f = &Harl::error;
-}
 
 void	Harl::debug( void )
 {
