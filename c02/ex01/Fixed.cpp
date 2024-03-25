@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 13:05:56 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/25 11:27:18 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/25 11:38:05 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,26 @@ Fixed& Fixed::operator=( const Fixed& Other )
 	return (*this);
 }
 
+Fixed::Fixed( const int inb ): _mantissa(inb << this->_expo)
+{
+	
+}
+
+Fixed::Fixed( const float fnb )
+{
+	
+}
+
+float	Fixed::toFloat( void ) const
+{
+	
+}
+
+int		Fixed::toInt( void ) const
+{
+	
+}
+
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
@@ -39,7 +59,6 @@ int		Fixed::getRawBits( void ) const
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_mantissa);
 }
-
 
 void	Fixed::setRawBits ( int const raw)
 {
