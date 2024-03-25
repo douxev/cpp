@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/03/25 11:25:13 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/03/25 12:41:56 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME = ex00
+NAME = ex01
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 URL = https://cdn.intra.42.fr/pdf/pdf/113980/en.subject.pdf
