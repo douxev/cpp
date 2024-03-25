@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 13:05:56 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/25 14:49:11 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/25 15:51:52 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ Fixed::Fixed( const Fixed& Other ): _mantissa(Other._mantissa)
 	std::cout << "Copy constructor called" << std::endl;
 }
 
-Fixed& Fixed::operator=( const Fixed& Other )
+
+Fixed&	Fixed::operator=( const Fixed& Other )
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->setRawBits(Other.getRawBits());
@@ -86,4 +87,10 @@ int		Fixed::getRawBits( void ) const
 void	Fixed::setRawBits ( int const raw)
 {
 	this->_mantissa = raw;
+}
+
+std::ostream	&operator<<( std::ostream& os, const Fixed& fixed)
+{
+	os << fixed.toFloat();
+	return (os);
 }

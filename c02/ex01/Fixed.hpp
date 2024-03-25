@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 13:43:54 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/25 11:34:15 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/25 15:53:04 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <string>
 # include <iostream>
 # include <cmath>
+# include <ostream>
+# include <sstream>
 
 class Fixed
 {
@@ -25,9 +27,10 @@ public:
 	Fixed( const Fixed& Other);
 	Fixed( const int inb );
 	Fixed( const float fnb );
-	Fixed& operator=( const Fixed& Other );
+	Fixed&	operator=( const Fixed& Other );
+
 	~Fixed();
-	
+
 	int		getRawBits( void ) const;
 	void	setRawBits ( int const raw);
 	float	toFloat( void ) const;
@@ -39,5 +42,6 @@ private:
 	static const int	_expo = 8;
 };
 
+std::ostream	&operator<<( std::ostream& os, const Fixed& fixed);
 
 #endif
