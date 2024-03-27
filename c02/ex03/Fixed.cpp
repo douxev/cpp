@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 13:05:56 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/27 13:32:29 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/27 14:01:18 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,30 +27,30 @@ int	ft_reverse_bits(int c)
 
 Fixed::Fixed( void ): _mantissa(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	// std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed( const Fixed& Other ): _mantissa(Other._mantissa)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	// std::cout << "Copy constructor called" << std::endl;
 }
 
 
 Fixed	Fixed::operator=( const Fixed& Other )
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	// std::cout << "Copy assignment operator called" << std::endl;
 	this->setRawBits(Other.getRawBits());
 	return (*this);
 }
 
 Fixed::Fixed( const int inb ): _mantissa(inb << this->_expo)
 {
-	std::cout << "Int constructor called" << std::endl;
+	// std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed( const float fnb )
 {
-	std::cout << "Float constructor called" << std::endl;
+	// std::cout << "Float constructor called" << std::endl;
 	
 	this->_mantissa = roundf(fnb * (1 << this->_expo));
 }
@@ -68,7 +68,7 @@ int		Fixed::toInt( void ) const
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 }
 
 int		Fixed::getRawBits( void ) const

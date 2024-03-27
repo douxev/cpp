@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/03/27 11:21:42 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/03/27 12:27:16 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME = ex00
+NAME = ex02
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 URL = https://cdn.intra.42.fr/pdf/pdf/113980/en.subject.pdf
@@ -23,7 +23,7 @@ URL = https://cdn.intra.42.fr/pdf/pdf/113980/en.subject.pdf
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SOURCES = main.cpp Fixed.cpp
+SOURCES = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 
 ################################################################################

@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/03/25 12:41:56 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/03/27 11:21:37 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ OBJS = $(SRCS:%.cpp=%.o)
 
 all: $(NAME)
 
-%.o : %.c
+%.o : %.cpp
 	@$(CC) $(CFLAGS) -c -o $@ $< $(INCLUDES)
 
 $(NAME) : $(OBJS)

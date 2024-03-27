@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 13:43:35 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/27 15:10:13 by jdoukhan         ###   ########.fr       */
+/*   Created: 2024/03/27 15:24:45 by jdoukhan          #+#    #+#             */
+/*   Updated: 2024/03/27 16:25:43 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-#include <iostream>
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main( void ) {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return (0);
-}
+# include <iostream>
+# include <string>
+# include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
+{
+public:
+
+	ScavTrap( void );
+	ScavTrap( std::string name);
+	~ScavTrap( void );
+
+	void	guardGate( void );
+	void	attack( const std::string& target );
+
+private:
+	
+};
+
+
+#endif

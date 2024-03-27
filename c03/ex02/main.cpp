@@ -6,20 +6,21 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 13:43:35 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/27 15:10:13 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:28:16 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 int main( void ) {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
+	ClapTrap	Clap("Marcelo");
+	ScavTrap	Scav("Donna");
+	
+	Scav.attack(Clap.getName());
+	Clap.takeDamage(8);
+	Clap.beRepaired(3);
+	Scav.guardGate();
+	
 	return (0);
 }
