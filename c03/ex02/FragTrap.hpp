@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/23 13:43:35 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/27 16:39:49 by jdoukhan         ###   ########.fr       */
+/*   Created: 2024/03/27 16:32:01 by jdoukhan          #+#    #+#             */
+/*   Updated: 2024/03/27 16:37:43 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
-#include <iostream>
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int main( void ) {
-	ClapTrap	Clap("Marcelo");
-	ScavTrap	Scav("Donna");
-	FragTrap	Frag("Filipout");
+# include <iostream>
+# include <string>
+# include "ClapTrap.hpp"
 
-	Frag.attack(Clap.getName());
-	Clap.takeDamage(8);
-	Frag.highFivesGuys();
+class FragTrap : public ClapTrap
+{
+public:
+
+	FragTrap( void );
+	FragTrap( std::string name);
+	~FragTrap( void );
+
+	void	highFivesGuys( void );
+	void	attack( const std::string& target );
+
+private:
 	
-	return (0);
-}
+};
+
+
+#endif
