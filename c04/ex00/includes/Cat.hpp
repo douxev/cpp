@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 18:22:54 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/27 18:38:21 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/28 11:04:29 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Cat: public Animal {
 
 public:
 
+	void	makeSound( void ) const;
 	Cat( void );
 	~Cat();
 

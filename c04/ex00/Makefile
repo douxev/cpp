@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/03/27 18:36:08 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/03/28 10:41:25 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SOURCES = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SOURCES = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 INCLUDES = -I./includes
 

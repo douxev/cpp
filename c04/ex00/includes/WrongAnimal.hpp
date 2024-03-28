@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 18:22:54 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/28 10:25:45 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/28 11:59:11 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ public:
 protected:
 
 	std::string	type;
-	std::string sound;
 };
 
 

@@ -6,35 +6,33 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 18:22:21 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/28 10:22:33 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/28 11:56:21 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal( void ): type("None"), sound("***") {
-	std::cout << "Animal Default Constructor called." << std::endl;
+WrongAnimal::WrongAnimal( void ): type("Wrong") {
+	std::cout << "WrongAnimal Default Constructor called." << std::endl;
 }
 
-Animal::Animal( const Animal& Other ): type(Other.type), sound(Other.sound) {
-	std::cout << "Animal Param Constructor called." << std::endl;
+WrongAnimal::WrongAnimal( const WrongAnimal& Other ): type(Other.type) {
+	std::cout << "WrongAnimal Param Constructor called." << std::endl;
 }
 
-Animal& Animal::operator=( const Animal& Other ) {
+WrongAnimal& WrongAnimal::operator=( const WrongAnimal& Other ) {
 	this->type = Other.type;
-	this->sound = Other.sound;
 	return (*this);
 }
 
-Animal::~Animal() {
-	std::cout << "Animal Destructor called." << std::endl;
+WrongAnimal::~WrongAnimal() {
+	std::cout << "WrongAnimal Destructor called." << std::endl;
 }
 
-void	Animal::makeSound( void ) const
-{
-	std::cout << this->sound << std::endl;
+void	WrongAnimal::makeSound( void ) const{
+	std::cout << "* weird zzz *" << std::endl;
 }
 
-std::string	Animal::getType( void ) const {
+std::string	WrongAnimal::getType( void ) const {
 	return (this->type);
 }
