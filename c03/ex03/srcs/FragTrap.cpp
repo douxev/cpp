@@ -6,14 +6,14 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:31:48 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/27 18:05:50 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:51:16 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap( void ) {
-	std::cout << "FragTrap Default Constructor called." << std::endl;
+	std::cout << "\033[0;32m✔️FragTrap Default Constructor called.\033[0m" << std::endl;
 	this->_hitpoints = 100;
 	if (this->_energy != 50)
 		this->_energy = 100;
@@ -21,7 +21,7 @@ FragTrap::FragTrap( void ) {
 }
 
 FragTrap::FragTrap( std::string name ) {
-	std::cout << "FragTrap Named Constructor called." << std::endl;
+	std::cout << "\033[0;32m✔️FragTrap Named Constructor called.\033[0m" << std::endl;
 	this->_name = name;
 	this->_hitpoints = 100;
 	if (this->_energy != 50)
@@ -30,7 +30,7 @@ FragTrap::FragTrap( std::string name ) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "FragTrap Destructor called." << std::endl;
+	std::cout << "\033[0;91m✗FragTrap Destructor called.\033[0m" << std::endl;
 }
 
 void	FragTrap::highFivesGuys( void ) {

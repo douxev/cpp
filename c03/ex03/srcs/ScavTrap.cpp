@@ -6,21 +6,21 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 15:24:34 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/27 17:53:21 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:51:21 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap( void ) {
-	std::cout << "ScavTrap Default Constructor called." << std::endl;
+	std::cout << "\033[0;32m✔️ScavTrap Default Constructor called.\033[0m" << std::endl;
 	this->_hitpoints = 100;
 	_energy = 50;
 	this->_attack = 20;
 }
 
 ScavTrap::ScavTrap( std::string name ) {
-	std::cout << "ScavTrap Named Constructor called." << std::endl;
+	std::cout << "\033[0;32m✔️ScavTrap Named Constructor called.\033[0m" << std::endl;
 	this->_name = name;
 	this->_hitpoints = 100;
 	_energy = 50;
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap( std::string name ) {
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap Destructor called." << std::endl;
+	std::cout << "\033[0;91m✗ScavTrap Destructor called.\033[0m" << std::endl;
 }
 
 void	ScavTrap::guardGate( void ) {
