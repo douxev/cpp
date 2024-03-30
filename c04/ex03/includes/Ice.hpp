@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 16:59:45 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/29 20:56:19 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/03/30 11:34:10 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,16 @@ class Ice: public AMateria{
 
 public:
 
-	Ice* clone() const;
-	void use(ICharacter& target);
-
-	// Ice( void );
-	// ~Ice();
+	Ice( void );
+	Ice( const Ice& Other);
+	Ice& operator=( const Ice& Other);
+	~Ice( void );
+	
+	virtual AMateria* clone( void ) const;
+	virtual void use(ICharacter& target);
 
 private:
 
-	/* data */
 };
 
 

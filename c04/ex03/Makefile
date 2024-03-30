@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/03/28 16:29:56 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/03/30 13:09:24 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME = ex02
+NAME = ex03
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
@@ -23,7 +23,8 @@ URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SOURCES = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SOURCES = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp ICharacter.cpp \
+		IMateriaSource.cpp MateriaSource.cpp
 
 INCLUDES = -I./includes
 
