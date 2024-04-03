@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "name": "CPP debug",
+    "type": "cppdbg",
+    "request": "launch",
+	"cwd": "${workspaceRoot}/ex02",
+    "includePath": [
+        "$/includes/"
+    ],
+    // "program": "${fileWorkspaceFolder}/../cpp",
+    "stopAtEntry": false,
+    "args": [],
+    "MIMode": "gdb",
+    "miDebuggerPath": "/usr/bin/gdb",
+    "configurations": [
+        {
+			"name": "CPP debug",
+			"type": "cppdbg",
+			"request": "launch",
+			"cwd": "${workspaceRoot}/ex02",
+			"program": "${cwd}/ex02/cpp",
+			"stopAtEntry": true,
+			"args": [],
+			"MIMode": "gdb",
+			"miDebuggerPath": "/usr/bin/gdb",
+        }
+    ]
+}

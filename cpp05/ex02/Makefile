@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/04/03 11:09:54 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/04/03 12:55:00 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 ################################################################################
 
 NAME = cpp
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CC = c++
 URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
 
@@ -23,7 +23,8 @@ URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SOURCES = main.cpp Bureaucrat.cpp Form.cpp
+SOURCES = 	main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp \
+			RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 INCLUDES = -I./includes
 
 
