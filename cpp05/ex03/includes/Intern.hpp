@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:25:32 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/04/03 13:41:59 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/04/03 15:07:29 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,20 @@ public:
 	Intern( const Intern& copied);
 	~Intern();
 
-	AForm& makeForm( std::string form, std::string target );
-
+	AForm* makeForm( std::string form, std::string target );
+	
 private:
 
+	void initlst( void );
 	struct s_formlst {
 		std::string name;
-		void (Intern::*f)( void );
+		AForm& (Intern::*f)( const std::string target );
 	};
+	
 	struct s_formlst _formlst[3];
-	PresidentialPardonForm& _makePPForm( const std::string target );
-	RobotomyRequestForm& _makeRRForm( const std::string target );
-	ShrubberyCreationForm& _SCForm( const std::string target );
+	AForm& _makePPForm( const std::string target );
+	AForm& _makeRRForm( const std::string target );
+	AForm& _makeSCForm( const std::string target );
 };
 
 
