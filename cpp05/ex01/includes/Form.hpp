@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 14:37:18 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/31 15:10:33 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/04/03 10:29:58 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string>
 # include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
 

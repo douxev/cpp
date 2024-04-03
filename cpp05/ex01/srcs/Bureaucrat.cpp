@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 23:07:47 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/31 15:10:06 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/04/03 10:30:46 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Bureaucrat& Bureaucrat::operator=( const Bureaucrat& Other ) {
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << "Bureaucrat " << this->_name << " got fired" << std::endl;
+	std::cout << "Bureaucrat " << this->_name << " got fired." << std::endl;
 }
 
 const std::string Bureaucrat::getName() const {

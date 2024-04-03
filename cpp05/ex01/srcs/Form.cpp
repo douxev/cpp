@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 14:37:11 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/03/31 15:04:35 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/04/03 10:30:25 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ _name(Other._name), _minSignGrade(Other._minSignGrade), _minExeGrade(Other._minE
 
 Form& Form::operator=( const Form& Other ) {
 	this->_signed = Other._signed;
+	return (*this);
 }
 
 Form::~Form() {
