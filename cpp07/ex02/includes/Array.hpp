@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:23:18 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/04/08 15:29:12 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:45:13 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <exception>
+# include <cstdlib>
 
 template <typename T>
 
