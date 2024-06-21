@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/06/13 15:29:15 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/04/09 14:51:06 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 ################################################################################
 
 NAME = cpp
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CC = c++
 URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
 
@@ -25,6 +25,7 @@ URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
 
 SOURCES = \
 		main.cpp\
+		BitcoinExchange.cpp\
 
 
 INCLUDES = -I./includes

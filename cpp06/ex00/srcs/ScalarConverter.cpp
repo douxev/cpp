@@ -6,7 +6,7 @@
 /*   By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 15:37:20 by jdoukhan          #+#    #+#             */
-/*   Updated: 2024/04/08 12:09:00 by jdoukhan         ###   ########.fr       */
+/*   Updated: 2024/06/13 14:33:53 by jdoukhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 void ScalarConverter::convert( const std::string str ) {
 
 	char	c;
-	int		nb;
 	float	fnb;
 	double	dnb;
 	bool point = 0;
