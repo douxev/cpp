@@ -6,13 +6,24 @@
 #include <map>
 #include <string>
 
+#ifndef DATABASE
+# define DATABASE "../data.csv"
+#endif
+
 class BitcoinExchange {
 
 public:
 
-	void	add_value( std::string value );
-	size_t	get_value( std::string date ) const;
-	void	print_data( void );
+	void		add_value( std::string value );
+	std::string	look_below( std::string date );
+	void		load_file( std::string filename );
+
+	size_t		get_value( std::string date ) const;
+	void		print_data( void );
+
+	void is_correct( std::string date, std::string value );
+
+
 
 
 	BitcoinExchange( void );
@@ -22,24 +33,24 @@ public:
 
 private:
 
-	std::map<std::string, size_t> _data;
+	std::map<std::string, double> _data;
 
 
 	class NoSuchKeyException: public std::exception {
 		public:
-		virtual const char* what() const throw() {return ("NoSuchKeyException");}
+		virtual const char* what() const throw() {return ("This key is unknown.");}
 	};
 	class NotPositiveException: public std::exception {
 		public:
-		virtual const char* what() const throw() {return ("NotPositiveException");}
+		virtual const char* what() const throw() {return ("This Number is too low.");}
 	};
 	class NumberTooBigException: public std::exception {
 		public:
-		virtual const char* what() const throw() {return ("NumberTooBigException");}
+		virtual const char* what() const throw() {return ("This number is too big.");}
 	};
 	class IncorrectDateFormatException: public std::exception {
 		public:
-		virtual const char* what() const throw() {return ("IncorrectDateFormatException");}
+		virtual const char* what() const throw() {return ("Incorrect Date Format.");}
 	};
 
 
