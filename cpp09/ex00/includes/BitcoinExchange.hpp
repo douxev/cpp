@@ -7,7 +7,7 @@
 #include <string>
 
 #ifndef DATABASE
-# define DATABASE "../data.csv"
+# define DATABASE "./data.csv"
 #endif
 
 class BitcoinExchange {
@@ -15,10 +15,9 @@ class BitcoinExchange {
 public:
 
 	void		add_value( std::string value );
-	std::string	look_below( std::string date );
 	void		load_file( std::string filename );
 
-	size_t		get_value( std::string date ) const;
+	size_t		get_value( std::string date );
 	void		print_data( void );
 
 	void is_correct( std::string date, std::string value );
@@ -28,6 +27,7 @@ public:
 
 	BitcoinExchange( void );
 	BitcoinExchange& operator=( const BitcoinExchange& Other );
+	bool operator==( const BitcoinExchange& Other );
 	BitcoinExchange( const BitcoinExchange& Other );
 	~BitcoinExchange();
 

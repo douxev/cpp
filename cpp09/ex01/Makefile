@@ -6,7 +6,7 @@
 #    By: jdoukhan <jdoukhan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 16:11:15 by jdoukhan          #+#    #+#              #
-#    Updated: 2024/06/25 13:55:40 by jdoukhan         ###   ########.fr        #
+#    Updated: 2024/06/25 13:56:17 by jdoukhan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME = btc
+NAME = RPN
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CC = c++
 URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
@@ -25,7 +25,7 @@ URL = https://cdn.intra.42.fr/pdf/pdf/89235/en.subject.pdf
 
 SOURCES = \
 		main.cpp\
-		BitcoinExchange.cpp\
+		RPN.cpp\
 
 
 INCLUDES = -I./includes
